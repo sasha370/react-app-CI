@@ -17,7 +17,7 @@ jobs:
           node-version: "12.x"
       - run: npm ci # альтернатива npm install ( устанавливает зависимости, но без изменения package-json.lock)
       - run: npm run format:check # запускаем скрипт из package.json для линтера
-      - run: npm test -- -- coverage # запускаем скрипт из package.json для создания отчета по покрытию кода
+      - run: npm test -- --coverage # запускаем скрипт из package.json для создания отчета по покрытию кода
         env:
           CI: true # и передаем в него статус CI
       - name: Build Project
