@@ -3,17 +3,29 @@ on: # отрабатывает только при пул реквесте в в
   pull_request:
     branches:
       - develop
+  push:
+    branches:
+      - develop
 jobs:
-  build:        # название джобы
-    runs-on: ubuntu-latest            # запускаем на последней убунте
+  build: # название джобы
+    runs-on: ubuntu-latest # запускаем на последней убунте
     steps:
-      - uses: actions/checkout@v2     # используя этот репозитарий выполнить шаг ниже
+      - uses: actions/checkout@v2 # используя этот репозитарий выполнить шаг ниже
       - name: Use NodeJS
-        uses: actions/setup-node@v1   # установить нужную верисию ноды
+        uses: actions/setup-node@v1 # установить нужную верисию ноды
         with:
           node-version: "12.x"
-      - run: npm ci                   # альтернатива npm install ( устанавливает зависимости, но без изменения package-json.lock)
-      - run: npm run format:check     # запускаем скрипт из package.json для линтера
-      - run: npm test -- -- coverage  # запускаем скрипт из package.json для создания отчета по покрытию кода
+      - run: npm ci # альтернатива npm install ( устанавливает зависимости, но без изменения package-json.lock)
+      - run: npm run format:check # запускаем скрипт из package.json для линтера
+      - run: npm test -- -- coverage # запускаем скрипт из package.json для создания отчета по покрытию кода
         env:
-          CI: true                    # и передаем в него статус CI
+          CI: true # и передаем в него статус CI
+      - name: Build Project
+        if: github.event_name == 'push'
+        run: npm run build
+      - name: Deploy to Staging
+        if: github.event_name == 'push'
+        run: npx surge --project ./build --domain amused-kittens.surge.sh
+        env:
+          SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
+          SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
