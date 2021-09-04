@@ -28,9 +28,19 @@ jobs:
       - run: npm test -- --coverage # запускаем скрипт из package.json для создания отчета по покрытию кода
         env:
           CI: true # и передаем в него статус CI
+      - name: Upload Test Coverage # Сохраняем рез-ты проверки покрытия как артифакт
+        uses: actions/upload-artifact@v1 # используем эту библиотеку
+        with:
+          name: code-coverage  # задаем название артифакта
+          path: coverage # путь к папке, которую нужно сохранить
       - name: Build Project # если это пушь, то собираем наш проект в папку build
         if: github.event_name == 'push'
         run: npm run build
+      - name: Upload Build Folder # после мержа на так же надо сохранить артифакты( билд нашего сайта)
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
       - name: Deploy to Staging # если это пушь, то деплоим проект на соот-щий домен
         if: github.event_name == 'push'
         run: npx surge --project ./build --domain amused-kittens.surge.sh
