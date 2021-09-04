@@ -24,14 +24,14 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm ci # альтернатива npm install ( устанавливает зависимости, но без изменения package-json.lock)
-      - run: npm run format:check # запускаем скрипт из package.json для линтера
+      - run: npm run format # запускаем скрипт из package.json для линтера
       - run: npm test -- --coverage # запускаем скрипт из package.json для создания отчета по покрытию кода
         env:
           CI: true # и передаем в него статус CI
       - name: Upload Test Coverage # Сохраняем рез-ты проверки покрытия как артифакт
         uses: actions/upload-artifact@v1 # используем эту библиотеку
         with:
-          name: code-coverage  # задаем название артифакта
+          name: code-coverage # задаем название артифакта
           path: coverage # путь к папке, которую нужно сохранить
       - name: Build Project # если это пушь, то собираем наш проект в папку build
         if: github.event_name == 'push'
