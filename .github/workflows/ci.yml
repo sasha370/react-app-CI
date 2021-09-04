@@ -37,6 +37,7 @@ jobs:
         if: github.event_name == 'push'
         run: npm run build
       - name: Upload Build Folder # после мержа на так же надо сохранить артифакты( билд нашего сайта)
+        if: github.event_name == 'push'
         uses: actions/upload-artifact@v1
         with:
           name: build
