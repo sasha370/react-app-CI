@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="feat: some feature">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/workflow-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/workflow-master.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/workflow-pr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/workflow-pr.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/workflow-staging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/workflow-staging.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +31,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="workflow" />
-                    <option name="lastUsedInstant" value="1630758721" />
+                    <option name="lastUsedInstant" value="1630763110" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />

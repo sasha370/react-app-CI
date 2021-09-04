@@ -1,0 +1,45 @@
+# При push в ветку Develop
+#- Установить зависимости
+#- Прогнать тесты
+#- Собрать проект
+#- Загрузить сборку в виде артифакта
+#- Деплойнуть на стейдж
+#- Использовать кеш
+
+name: Deploy to Staging
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  push-to-develop:
+    runs-on: ubuntu-latest
+    env:
+      SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
+      SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Use NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+      - name: Build Project
+        run: npm run build
+      - name: Upload Build Folder
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
+      - name: Deploy to Staging
+        run: npx surge --project ./build --domain amused-kittens.surge.sh
