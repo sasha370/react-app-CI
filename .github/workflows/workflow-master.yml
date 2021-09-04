@@ -39,7 +39,7 @@ jobs:
       - name: Run Linter
         run: npm run format:check
       - name: Run tests and Coverage
-      - run: npm test -- --coverage
+        run: npm test -- --coverage
         env:
           CI: true
       - name: Upload Test Coverage
