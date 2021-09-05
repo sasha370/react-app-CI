@@ -41,12 +41,18 @@ jobs:
           path: coverage
       - name: Open Issue
         if: failure()
-        run: |
-          curl -X POST \
-          --url https://api.github.com/repos/${{github.repository}}/issues \
-          --header 'Authorization: Bearer ${{secrets.CUSTOM_TOKEN}}' \
-          --header "Accept: application/vnd.github.v3+json" \
-          --header 'Content-type: application/json' \
-          -d '{"title":"Automated issue for commit: ${{github.sha}}", \
-          "body":"This issue was automatically createdby the GitHub Action workflow **${{github.workflow}}**. \n\n The commit hash was: _${{github.sha}}_.", \
-          "assignees":["${{github.event.pull_request.user.login}}"]}'
+        uses: rishabhgupta/git-action-issue@v2
+        with:
+          token: ${{ secrets.CUSTOM_TOKEN }}
+          title: 'Automated issue for commit: ${{github.sha}}'
+          body: 'This issue was automatically created by the GitHub Action workflow **${{github.workflow}}**. \n\n The commit hash was: _${{github.sha}}_.'
+          assignees: "${{github.event.pull_request.user.login}}"
+#        run: |
+#          curl -X POST \
+#          --url https://api.github.com/repos/${{github.repository}}/issues \
+#          --header 'Authorization: Bearer ${{secrets.CUSTOM_TOKEN}}' \
+#          --header "Accept: application/vnd.github.v3+json" \
+#          --header 'Content-type: application/json' \
+#          -d '{"title":"Automated issue for commit: ${{github.sha}}", \
+#          "body":"This issue was automatically createdby the GitHub Action workflow **${{github.workflow}}**. \n\n The commit hash was: _${{github.sha}}_.", \
+#          "assignees":["${{github.event.pull_request.user.login}}"]}'
