@@ -61,7 +61,7 @@ jobs:
       - name: Create Release
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
       - name: Deploy to Staging
         run: npx surge --project ./build --domain decorous-lake.surge.sh
       - name: Upload Coverage Report
