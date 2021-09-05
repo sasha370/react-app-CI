@@ -1,3 +1,6 @@
+![example workflow](https://github.com/sasha370/react-app-CI/actions/workflows/workflow-master.yml/badge.svg)
+![example workflow](https://github.com/sasha370/react-app-CI/actions/workflows/workflow-staging.yml/badge.svg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
