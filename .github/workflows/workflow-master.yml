@@ -33,9 +33,9 @@ jobs:
       - name: Use NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "16.x"
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --no-optional
       - name: Run Linter
         run: npm run format:check
       - name: Run tests and Coverage
@@ -61,7 +61,7 @@ jobs:
       - name: Create Release
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
       - name: Deploy to Staging
         run: npx surge --project ./build --domain decorous-lake.surge.sh
       - name: Upload Coverage Report
