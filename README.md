@@ -3,6 +3,7 @@
 
 This is a test project to learn how GitHub CI works.
 Here I'm used:
+
 - GHA
 - Slack notification
 - Coverage report on CodeCov
