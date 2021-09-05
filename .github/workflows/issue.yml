@@ -7,5 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Message
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"New issue created: <${{github.event.issue.html_url}}|${{github.event.issue.title}}.>"}' ${{secrets.SLACK_WEBHOOK}}
+        id: slack
+        uses: slackapi/slack-github-action@v1.14.0
+        with:
+          payload: '{"text":"New issue created: <${{github.event.issue.html_url}}|${{github.event.issue.title}}.>"}'
+        env:
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK}}
