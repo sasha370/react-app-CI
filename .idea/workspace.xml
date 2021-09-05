@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="" />
+    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter">
+      <change afterPath="$PROJECT_DIR$/.husky/commit-msg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commitlint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Codeowner" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="add commit linter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add commit linter" />
   </component>
 </project>
