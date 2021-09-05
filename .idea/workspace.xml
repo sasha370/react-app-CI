@@ -54,6 +54,12 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.github/workflows/workflow-pr.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.github/workflows/workflow-staging.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.github/workflows/workflow-master.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.github/workflows/release.yml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="minikube" />
     <option name="namespace" value="default" />
