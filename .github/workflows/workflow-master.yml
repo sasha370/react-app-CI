@@ -67,4 +67,4 @@ jobs:
       - name: Upload Coverage Report
         run: npx codecov
         env:
-          CODECOVE_TOKEN: ${{secrets.CODECOV_TOKEN}}
+          CODECOVE_TOKEN: ${{secrets.CODECOV_TOKEN}}'
