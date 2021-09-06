@@ -3754,7 +3754,7 @@ async  function  run() {
     const assignees = core.getInput('assignees');
 
     const octokit = new github.getOctokit(token);
-    const response = await octokit.issues.create({
+    const response = await octokit.rest.issues.create({
       ...github.context.repo,
       title,
       body,
