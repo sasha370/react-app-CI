@@ -643,7 +643,7 @@ try {
   core.warning("Warning message");
   core.error("Error message");
 
-  const name = core.getInput("who-to-gree");
+  const name = core.getInput("who-to-greet");
   core.setSecret(name);
   console.log(`Hello ${name}`);
 
