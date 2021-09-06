@@ -3755,7 +3755,8 @@ async  function  run() {
 
     const octokit = new github.getOctokit(token);
     const response = await octokit.rest.issues.create({
-      ...github.context.repo,
+      owner: github.context.repo.owner,
+      repo: github.context.repo.repo,
       title,
       body,
       assignees: assignees ? assignees.split('\n') : undefined
