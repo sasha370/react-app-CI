@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Send Slack Message via Docker
+        uses: ./.github/actions/slack
+        with:
+          slack_webhook: ${{secrets.SLACK_WEBHOOK}}
+          message: Hello slack from Docker
+
       - uses: ./.github/actions/hello-docker
         id: hello
         with:
