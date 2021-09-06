@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter" />
+    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -30,10 +25,6 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
-                  <RecentBranch>
-                    <option name="branchName" value="add_custom_actions" />
-                    <option name="lastUsedInstant" value="1630911094" />
-                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="workflow" />
                     <option name="lastUsedInstant" value="1630763110" />
@@ -127,7 +118,6 @@
       <updated>1630588131853</updated>
       <workItem from="1630588133183" duration="3407000" />
       <workItem from="1630655812471" duration="3655000" />
-      <workItem from="1630906580882" duration="3400000" />
     </task>
     <task id="LOCAL-00001" summary="Add Codeowner">
       <created>1630665610872</created>
