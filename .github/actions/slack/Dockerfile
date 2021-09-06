@@ -6,3 +6,4 @@ COPY . .
 #RUN bundle install
 
 ENTRYPOINT ['/usr/local/bin/ruby, /usr/src/app/script.rb']
+CMD 'ls -a /usr/srs/app'
