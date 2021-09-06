@@ -16,7 +16,7 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           title: Title
-          bode: Body
+          body: Body
           assignees: |
             first
             second
