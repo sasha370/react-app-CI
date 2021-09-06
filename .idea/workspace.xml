@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter">
-      <change afterPath="$PROJECT_DIR$/.github/actions/action.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/actions/hello/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/actions.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +127,7 @@
       <updated>1630588131853</updated>
       <workItem from="1630588133183" duration="3407000" />
       <workItem from="1630655812471" duration="3655000" />
-      <workItem from="1630906580882" duration="3076000" />
+      <workItem from="1630906580882" duration="3400000" />
     </task>
     <task id="LOCAL-00001" summary="Add Codeowner">
       <created>1630665610872</created>
