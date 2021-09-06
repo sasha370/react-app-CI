@@ -18,7 +18,6 @@ jobs:
           title: Title
           body: Body
           assignees: |
-            first
-            second
+            sasha370
       - run: |
           echo ${{ steps.issue.outputs.issue}}
