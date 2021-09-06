@@ -3,7 +3,7 @@
 #- Второй создает Issue при падении pull в ветку develop (дублирует существующий шаг )
 
 on:
-  push:
+  pull_request:
     branches:
       - develop
 jobs:
