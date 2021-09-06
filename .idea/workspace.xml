@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/actions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/actions.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/actions/hello-docker/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/actions/hello-docker/action.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/actions/hello-docker/entrypoint.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +44,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1630919745" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="add_custom_actions" />
                     <option name="lastUsedInstant" value="1630911094" />
                   </RecentBranch>
@@ -52,10 +58,6 @@
                   <RecentBranch>
                     <option name="branchName" value="develop" />
                     <option name="lastUsedInstant" value="1630665668" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1630665667" />
                   </RecentBranch>
                 </list>
               </option>
