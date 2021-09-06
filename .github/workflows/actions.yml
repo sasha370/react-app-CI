@@ -19,7 +19,7 @@ jobs:
           echo "Time: ${{steps.hello.outputs.time}}"
           echo $HELLO
       - name: Open Issue by custom action # run only is smt broken in this pipeline
-#        if: failure()
+        if: failure()
         uses: ./.github/actions/issue
         id: issue
         with:
