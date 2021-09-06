@@ -5,4 +5,4 @@ COPY . .
 #COPY Gemfile Gemfile.lock ./
 #RUN bundle install
 
-ENTRYPOINT ['ruby', '/usr/src/app/script.rb']
+ENTRYPOINT ['/usr/local/bin/ruby, /usr/src/app/script.rb']
