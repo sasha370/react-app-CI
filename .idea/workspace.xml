@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter" />
+    <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter">
+      <change beforePath="$PROJECT_DIR$/.github/actions/action.yml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +90,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github/actions/hello" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -127,7 +129,7 @@
       <updated>1630588131853</updated>
       <workItem from="1630588133183" duration="3407000" />
       <workItem from="1630655812471" duration="3655000" />
-      <workItem from="1630906580882" duration="3838000" />
+      <workItem from="1630906580882" duration="4153000" />
     </task>
     <task id="LOCAL-00001" summary="Add Codeowner">
       <created>1630665610872</created>
