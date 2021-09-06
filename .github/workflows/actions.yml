@@ -1,4 +1,11 @@
-on: push
+# Workflow для вызова кастомных экшенов
+#- Первый Использует пеерданный параметр для присвоения переменной
+#- Второй создает Issue при падении pull в ветку develop (дублирует существующий шаг )
+
+on:
+  push:
+    branches:
+      - develop
 jobs:
   testing-action:
     runs-on: ubuntu-latest
@@ -11,13 +18,12 @@ jobs:
       - run: |
           echo "Time: ${{steps.hello.outputs.time}}"
           echo $HELLO
-      - uses: ./.github/actions/issue
+      - name: Open Issue by custom action
+        if: failure()
+        uses: ./.github/actions/issue
         id: issue
         with:
           token: ${{secrets.GITHUB_TOKEN}}
-          title: Title
-          body: Body
-          assignees: |
-            sasha370
-      - run: |
-          echo ${{ steps.issue.outputs.issue}}
+          title: "Automated issue for commit: ${{github.sha}} by Custom action"
+          body: "This issue was automatically created by the GitHub Action workflow **${{github.workflow}}**. \n\n The commit hash was: _${{github.sha}}_."
+          assignees: "${{github.event.pull_request.user.login}}"
