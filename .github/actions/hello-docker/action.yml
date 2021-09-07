@@ -1,0 +1,18 @@
+name: Hello World
+author: Sasha370
+description: Some description
+inputs:
+  who-to-greet:
+    description: "Who to greet"
+    required: true
+    default: Ali
+outputs:
+  time:
+    description: "The greeting time"
+runs:
+  using: docker
+  image: "Dockerfile"
+  env:
+    some-env: some-env
+  args: # В это поле передаются параметры, которые потом передадутся как аргументы ком.строки в контейнер при запуске Entrypoint
+    - ${{inputs.who-to-greet}} # в нашем случае мы достаем динамический параметр из ввода в предыдущем шаге
