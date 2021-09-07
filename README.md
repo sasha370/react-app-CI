@@ -4,6 +4,7 @@
 [staging](decorous-lake.surge.sh) | [production](amused-kittens.surge.sh)
 
 ## About
+
 This is a test project to learn how GitHub CI works.
 Here I'm used:
 
