@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3702f3d3-de1a-4be8-82e4-ff4f54bf1010" name="Changes" comment="add commit linter">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/actions/slack/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.github/actions/slack/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +162,7 @@
       <workItem from="1630588133183" duration="3407000" />
       <workItem from="1630655812471" duration="3655000" />
       <workItem from="1630906580882" duration="8502000" />
-      <workItem from="1630999613681" duration="1292000" />
+      <workItem from="1630999613681" duration="1673000" />
     </task>
     <task id="LOCAL-00001" summary="Add Codeowner">
       <created>1630665610872</created>
