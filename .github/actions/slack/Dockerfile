@@ -1,6 +1,6 @@
 FROM ruby:2.5
+WORKDIR /usr/app
+COPY . /usr/app
 
-COPY script.rb script.rb
 
-
-ENTRYPOINT ["ruby", "script.rb"]
+ENTRYPOINT ["ruby", "/usr/app/script.rb"]
