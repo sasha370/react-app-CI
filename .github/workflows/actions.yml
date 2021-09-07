@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: 'add_actions_in_docker'
+          ref: add_actions_in_docker
       - name: Send Slack Message via Docker
         uses: ./.github/actions/slack
         with:
