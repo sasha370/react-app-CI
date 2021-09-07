@@ -1,6 +1,6 @@
 FROM ruby:2.5
 
-COPY . .
+COPY ./.github/actions/slack script.rb
 
 
-ENTRYPOINT ["ruby", "./script.rb"]
+ENTRYPOINT ["ruby", "script.rb"]
