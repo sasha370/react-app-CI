@@ -2,7 +2,8 @@
 ![amused-kittens.surge.sh](https://github.com/sasha370/react-app-CI/actions/workflows/workflow-master.yml/badge.svg)
 
 [staging](decorous-lake.surge.sh) | [production](amused-kittens.surge.sh)
-##About
+
+## About
 This is a test project to learn how GitHub CI works.
 Here I'm used:
 
@@ -13,7 +14,7 @@ Here I'm used:
 - Surge for simple deploy
 - Semantic-release for auto tag
 
-##What was done:
+## What was done:
 
 1. Workflow for all PR in Develop branch
 2. Workflow for Staging
