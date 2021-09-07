@@ -1,4 +1,8 @@
 FROM ruby:2.5
-COPY script.rb ~/script.rb
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+COPY . .
 
-ENTRYPOINT ["ruby", "~/script.rb"]
+RUN bundle install
+
+ENTRYPOINT ["ruby", "script.rb"]
