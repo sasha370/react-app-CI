@@ -8,7 +8,7 @@ def message
         "type": "section",
         "text": {
           "type": "mrkdwn",
-          "text": ENV['INPUT_MESSAGE'] || 'empty'
+          "text": ENV['INPUT_MESSAGE']
         }
       },
       {
@@ -16,19 +16,19 @@ def message
         "fields": [
           {
             "type": "mrkdwn",
-            "text": "*Repository:*\n#{ENV['GITHUB_REPOSITORY'] || 'empty'}"
+            "text": "*Repository:*\n#{ENV['GITHUB_REPOSITORY']}"
           },
           {
             "type": "mrkdwn",
-            "text": "*Event:*\n#{ENV['GITHUB_EVENT_NAME'] || 'empty'}"
+            "text": "*Event:*\n#{ENV['GITHUB_EVENT_NAME']}"
           },
           {
             "type": "mrkdwn",
-            "text": "*Ref:*\n#{ENV['GITHUB_REF'] || 'empty'}"
+            "text": "*Ref:*\n#{ENV['GITHUB_REF']}"
           },
           {
             "type": "mrkdwn",
-            "text": "*SHA:*\n#{ENV['GITHUB_SHA'] || 'empty'}"
+            "text": "*SHA:*\n#{ENV['GITHUB_SHA']}"
           }
         ]
       }
@@ -37,7 +37,7 @@ def message
 end
 
 def send_slack_message
-  path = ENV['INPUT_SLACK_WEBHOOK'] || 'https://hooks.slack.com/services/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'
+  path = ENV['INPUT_SLACK_WEBHOOK']
   responce = %x{curl -X POST -H 'Content-type: application/json' --data '#{message}' "#{path}"}
   return puts 'ERROR' until responce == 'ok'
 end
