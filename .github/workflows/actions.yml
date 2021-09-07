@@ -7,17 +7,14 @@ on:
     branches:
       - develop
 jobs:
-  checkout-repo:
+
+  send-slack-msg:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           ref: add_actions_in_docker  # test brunch
 
-  send-slack-msg:
-    runs-on: ubuntu-latest
-    needs: [checkout-repo]
-    steps:
       - name: Send Slack Message via Docker
         uses: ./.github/actions/slack
         with:
@@ -38,6 +35,9 @@ jobs:
   say-hello-from-docker:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: add_actions_in_docker  # test brunch
       - uses: ./.github/actions/hello-docker
         id: hello
         with:
