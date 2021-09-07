@@ -14,16 +14,17 @@ Here I'm used:
 - Semantic-release for auto tag
 
 ##What was done:
-1) Workflow for all PR in Develop branch
-2) Workflow for Staging 
-3) Workflow for Production
-4) Send Slack msg when new Release created
-5) Custom Actions for GH:
-    - launch some JS file
-    - run Docker container with some script
-    - make Issue on GitHub
-    - send Slack msg from Docker container with PR's data
-    
+
+1. Workflow for all PR in Develop branch
+2. Workflow for Staging
+3. Workflow for Production
+4. Send Slack msg when new Release created
+5. Custom Actions for GH:
+   - launch some JS file
+   - run Docker container with some script
+   - make Issue on GitHub
+   - send Slack msg from Docker container with PR's data
+
 ![](../../../Изображения/Выделение_019.png)
 
 ### Getting Started with Create React App
@@ -31,6 +32,7 @@ Here I'm used:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `npm start`
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 

@@ -7,13 +7,12 @@ on:
     branches:
       - develop
 jobs:
-
   send-slack-msg:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: add_actions_in_docker  # test brunch
+          ref: add_actions_in_docker # test brunch
 
       - name: Send Slack Message via Docker
         uses: ./.github/actions/slack
@@ -31,13 +30,12 @@ jobs:
           body: "This issue was automatically created by the GitHub Action workflow **${{github.workflow}}**. \n\n The commit hash was: _${{github.sha}}_."
           assignees: "${{github.event.pull_request.user.login}}"
 
-
   say-hello-from-docker:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: add_actions_in_docker  # test brunch
+          ref: add_actions_in_docker # test brunch
       - uses: ./.github/actions/hello-docker
         id: hello
         with:
